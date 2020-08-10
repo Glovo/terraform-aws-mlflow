@@ -23,7 +23,6 @@ resource "aws_iam_role_policy" "db_secrets" {
           "secretsmanager:GetResourcePolicy",
           "secretsmanager:GetSecretValue",
           "secretsmanager:DescribeSecret",
-          "secretsmanager:ListSecretVersionIds",
         ]
         Resource = [
           data.aws_secretsmanager_secret_version.db_password.arn,
