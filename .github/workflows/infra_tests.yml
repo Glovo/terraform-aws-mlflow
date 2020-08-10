@@ -25,4 +25,4 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_INFRA_TEST_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_INFRA_TEST_SECRET_ACCESS_KEY }}
       run: |
-        cd terratest/tests && go test -v -timeout 35m mlflow_test.go
+        cd terratest/test && go test -v -timeout 35m mlflow_test.go
