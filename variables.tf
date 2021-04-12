@@ -145,8 +145,8 @@ variable "artifact_bucket_encryption_key_arn" {
   default     = null
 }
 
-variable "gunicorn_worker_timeout" {
-  description = "The timeout of gunicorn workers (in secondes)"
-  type        = number
-  default     = 30
+variable "gunicorn_opts" {
+  description = "Additional command line options forwarded to gunicorn processes (https://mlflow.org/docs/latest/cli.html#cmdoption-mlflow-server-gunicorn-opts)"
+  type        = string
+  default     = ""
 }
