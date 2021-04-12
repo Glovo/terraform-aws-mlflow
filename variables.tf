@@ -144,3 +144,9 @@ variable "artifact_bucket_encryption_key_arn" {
   type        = string
   default     = null
 }
+
+variable "gunicorn_worker_timeout" {
+  description = "The timeout of gunicorn workers (in secondes)"
+  type        = number
+  default     = 30
+}
