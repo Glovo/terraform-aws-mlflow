@@ -1,6 +1,6 @@
 provider "aws" {
   region  = "eu-west-1"
-  version = "~> 2.28"
+  version = "~> 3.10"
 }
 
 resource "random_id" "id" {
@@ -18,7 +18,7 @@ resource "aws_secretsmanager_secret_version" "db_password" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "2.44.0"
+  version = "2.70.0"
 
   name               = "mlflow-${random_id.id.hex}"
   cidr               = "10.0.0.0/16"
